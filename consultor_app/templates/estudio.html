@@ -1,0 +1,124 @@
+<DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Css propio-->
+    <link rel="stylesheet" href="../static/style.css" />
+    <!-- CSS bootstrap5-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  
+  <body class="body_estudio" >
+
+    <!-- div conteiner pag  start--> 
+    <div class= "conteiner_pag">
+
+    <!-- header start-->
+    <div class="nav" style="background-color: rgb(196, 191, 191); height: 114px;  margin: auto; width: 100%;" >
+     
+      <!-- logo aplicacion start-->
+      <div id="logo_sitio">
+        <a href="{% url 'home' %}">
+          <img src="../static/images/logo_segcaho.PNG" alt=""  class="logo_muertes"  />
+      </a>
+      </div>
+<!-- logo aplicacion  end -->
+
+    <!-- Right header start --> 
+    <div class="header_derecha" >
+
+  <!-- logos usuario y salida start -->
+  <div  class="usuario_salida">
+  <a  class="usuario_logueado" >{{user.username}}</a>
+  <a href="{% url 'logout' %}" class="salida_sitio" > </a>
+</div>
+<!-- logos usuario y salida end -->
+
+<!-- logos herramientas start -->
+<div id="menu_herramientas" >
+  <ul >
+    <li ><a href="{% url 'home' %}">Inicio</a></li>
+    <li ><a  href="/datos/">Datos</a></li>
+    <li ><a href="/estudio/">Estudio</a></li>
+    <li ><a href="/recomendacion/">Recomendación</a></li>
+  </ul>
+</div>
+<!-- logos herramientas end -->
+
+</div>
+ <!-- right header end -->
+
+</div>
+      <!-- Header end-->
+
+
+
+    <br>
+    <br>
+    <!-- formulario start-->
+    <div class="card-white  "  >
+      <form action="/estudio/" method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="titulo" class="label_inputs" >Título</label>
+            <input id="titulo_estudio" name="titulo_estudio" class="form-control" type="text"  >
+        </div>
+    
+        <div class="mb-3  inputs_estudio">
+            <label for="cuerpo" class="label_inputs" >Cuerpo del estudio</label>
+            <textarea id="cuerpo_estudio" name="cuerpo_estudio" class="form-control " rows="3"></textarea>
+        </div>
+    
+        <div class="mb-3 inputs_estudio">
+            <label for="conclusion" class="label_inputs">Conclusión</label>
+            <textarea id="conclusion_estudio" name="conclusion_estudio" class="form-control " rows="3"></textarea>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Guardar estudio</button>
+    </form>
+    </div>
+  <!-- formulario end-->
+   <br>
+   <br>
+
+    
+    
+    
+    
+    
+    <!-- footer start -->
+    <footer class="bg-light text-center text-lg-start">
+      <div class="text-center p-3" style="background-color: rgb(196, 191, 191)">
+        Ministerio de salud:
+        <a class="text-dark" href="https://www.minsal.cl">minsal.cl</a>
+      </div>
+    </footer>
+   <!-- footer end -->
+  
+  </div>
+  <!-- div conteiner pag  end-->
+
+    <!-- js bootstrap5-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery cdn -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS mio-->
+    <script src="../static/Validaciones.js"></script>
+  </body>
+</html>

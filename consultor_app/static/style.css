@@ -1,0 +1,484 @@
+/* ******* LOGIN START********** */
+
+/* Estilo personalizado para el contenedor principal */
+.container-custom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Esto centra el contenido verticalmente en la página */
+  background-color: rgb(230, 218, 218);
+}
+
+/* Estilo personalizado para el contenedor del logo y el formulario */
+.logo-and-form {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+  justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor */
+}
+
+.center-button {
+  text-align: center;
+}
+
+/* Estilo personalizado para el logotipo */
+.logo {
+  max-width: 300px; /* Ajusta el ancho máximo según tu necesidad */
+  margin-right: 0px; /* Agrega espacio entre el logo y el formulario */
+  height: 223px;
+}
+
+.html_completo {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(230, 218, 218);
+}
+
+.logo-form-space {
+  margin-top: 20px; /* Puedes ajustar la cantidad de espacio según tu preferencia */
+}
+
+/* Estilo personalizado para los input */
+.input-custom {
+  width: 100%; /* Los input ocuparán todo el ancho disponible */
+}
+
+/* Estilo personalizado para el botón */
+.btn-custom {
+  width: 100%; /* El botón ocupará todo el ancho disponible */
+}
+
+.card-custom {
+  width: 300px; /* Puedes ajustar el ancho de la tarjeta según tus necesidades */
+  margin-right: 20px; /* Agrega espacio entre la tarjeta y el logo */
+}
+
+/* ******* LOGIN END********** */
+
+/* ******* HOME START********** */
+
+body {
+  background-color: rgb(230, 218, 218);
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #3f5968;
+}
+p {
+  margin: 0px;
+  padding: 0 0 5px 0;
+  line-height: 17px;
+  text-align: justify;
+}
+p.pat {
+  color: #ffffff;
+}
+h1 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 5px 0 5px 0;
+}
+h2 {
+  color: #759f1b;
+  font-size: 16px;
+  float: left;
+  font-weight: bold;
+  margin: 0px;
+  padding: 5px 0 0 0;
+}
+span.blue {
+  color: #a5dcf8;
+}
+span.dark_blue {
+  color: #116c64;
+}
+#main_container {
+  width: 900px;
+  height: auto;
+  margin: auto;
+  background-color: rgb(230, 218, 218);
+}
+.header {
+  width: 100%;
+  height: 114px;
+  margin: auto;
+  background-color: rgb(204, 199, 199);
+}
+.right_header {
+  float: right;
+  width: 550px;
+}
+#logo {
+  padding: 30px 0 0 20px;
+  float: left;
+  width: 10px;
+  height: 10px;
+}
+/*----------------------menu-------------------------*/
+#menu {
+  width: 500px;
+  height: 35px;
+  float: right;
+  padding: 40px 0 0 0;
+}
+#menu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  font-weight: bold;
+}
+#menu ul li {
+  list-style: none;
+  display: inline;
+  float: left;
+  width: 102px;
+  height: 35px;
+  padding: 0px;
+  line-height: 35px;
+  font-size: 13px;
+  margin: 0 3px 0 3px;
+}
+#menu ul li a {
+  height: 35px;
+  width: 102px;
+  float: left;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  color: #6c7b83;
+  text-align: center;
+  background: url(images/menu_bt.gif) no-repeat center;
+}
+#menu ul li a:hover {
+  height: 35px;
+  width: 102px;
+  text-decoration: none;
+  color: #68c2ef;
+}
+#menu ul li a.current {
+  height: 35px;
+  width: 102px;
+  float: left;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  color: #68c2ef;
+  background: url(images/menu_bt.gif) no-repeat center;
+}
+
+#middle_box {
+  width: 900px;
+  height: 208px;
+  clear: both;
+  margin: auto;
+  background: url(images/middle_banner.gif) no-repeat center;
+}
+.middle_box_content {
+  padding: 30px 0 0 20px;
+  color: #ffffff; /* Cambia el color del texto a blanco */
+  max-width: 600px; /* Establece el ancho máximo en píxeles o el valor que desees */
+}
+.top_menu {
+  width: 285px;
+  float: right;
+}
+a.login {
+  width: 49px;
+  height: 35px;
+  display: block;
+  background: url(images/login.gif) no-repeat center;
+  line-height: 35px;
+  color: #77777c;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 0 0 40px;
+  float: left;
+  margin: 0 3px 0 3px;
+}
+a.sign_up {
+  width: 49px;
+  height: 35px;
+  display: block;
+  background: url(../static/images/salir.gif) no-repeat center;
+  line-height: 35px;
+  color: #77777c;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 0 0 40px;
+  float: left;
+  margin: 0 3px 0 3px;
+}
+.pattern_bg {
+  width: 900px;
+  height: 162px;
+  clear: both;
+  margin: auto;
+  background: url(images/pattern_bg.gif) no-repeat center;
+}
+.pattern_box {
+  width: 400px;
+  float: left;
+  padding: 15px 0 0 25px;
+}
+.pattern_box_icon {
+  float: left;
+  padding: 5px;
+}
+.pattern_content {
+  width: 300px;
+  float: left;
+  padding: 0 0 0 10px;
+}
+/*---------------------main_content------------------*/
+#main_content {
+  width: 885px;
+  height: auto;
+  margin: auto;
+  padding: 0 0 0 15px;
+}
+.clear {
+  clear: both;
+}
+.box_content {
+  width: 267px;
+  height: auto;
+  float: left;
+  margin: 10px 10px 30px 10px;
+  background: url(images/box_bg.gif) no-repeat top center;
+}
+.box_title {
+  padding: 10px 0 10px 0;
+}
+.title_icon {
+  float: left;
+  padding: 0 5px 0 10px;
+}
+.box_text_content {
+  width: 250px;
+  float: left;
+  padding: 15px 0 0 15px;
+}
+.box_icon {
+  float: left;
+  padding: 0 5px 0 0;
+}
+.box_text {
+  width: 190px;
+  float: left;
+  text-align: justify;
+  padding: 0 0 0 10px;
+}
+a.details {
+  float: right;
+  padding: 5px 15px 0 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: #f8851f;
+}
+/*-----------------------------footer------------------*/
+#footer {
+  width: 900px;
+  height: 45px;
+  color: #508aa1;
+  background-color: rgb(196, 191, 191);
+  display: flex;
+}
+
+.center_footer {
+  margin-top: 22px;
+  margin-left: 370px;
+}
+
+/* ******* HOME END********** */
+
+
+.verde{
+    background-color: green;
+}
+
+
+/* ******* ESTUDIO START********** */
+.body_estudio {
+  background-color: rgb(230, 218, 218);
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  
+}
+
+.conteiner_pag {
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  background-color: rgb(230, 218, 218);
+}
+
+#logo_sitio {
+  padding: 30px 0 0 20px;
+  float: left;
+  width: 10px;
+  height: 10px;
+}
+
+.logo_muertes{
+  width:162px ;
+  height: 54px ;
+  border: 0 ;
+}
+
+.header_derecha {
+  margin-left: 420px;
+  float: right;
+  width: 550px;
+}
+.usuario_salida {
+  width: 285px;
+  float: right;
+}
+
+
+.usuario_logueado  {
+  width: 100px;
+  height: 35px;
+  display: block;
+  background: url(../static/images/login.gif) no-repeat center;
+  line-height: 35px;
+  color: #77777c;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 0 0 40px;
+  float: left;
+  margin: 0 3px 0 3px;
+}
+.salida_sitio {
+  width: 100px;
+  height: 35px;
+  display: block;
+  background: url(../static/images/salir.gif) no-repeat center;
+  line-height: 35px;
+  color: #77777c;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 0 0 40px;
+  float: left;
+  margin: 0 3px 0 3px;
+}
+
+
+
+#menu_herramientas {
+  width: 500px;
+  height: 35px;
+  float: right;
+  padding: 40px 0 0 0;
+}
+#menu_herramientas ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  font-weight: bold;
+}
+#menu_herramientas ul li {
+  list-style: none;
+  display: inline;
+  float: left;
+  width: 102px;
+  height: 35px;
+  padding: 0px;
+  line-height: 35px;
+  font-size: 13px;
+  margin: 0 3px 0 3px;
+}
+#menu_herramientas ul li a {
+  height: 35px;
+  width: 102px;
+  float: left;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  color: #6c7b83;
+  text-align: center;
+  background: url(../static/images/menu_bt.gif) no-repeat center;
+}
+#menu_herramientas ul li a:hover {
+  height: 35px;
+  width: 102px;
+  text-decoration: none;
+  color: #68c2ef;
+}
+#menu_herramientas ul li a.current {
+  height: 35px;
+  width: 102px;
+  float: left;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  color: #68c2ef;
+  background: url(../static/images/menu_bt.gif) no-repeat center;
+}
+
+.label_inputs {
+  font-size: 24px;
+}
+
+.inputs_estudio input.form-control,
+.inputs_estudio textarea.form-control {
+  height: 200px; /* Ajusta la altura según tu preferencia */
+}
+
+
+
+
+
+
+
+/* ******* ESTUDIO END********** */
+
+
+/* ******* RECOMENDACION START********** */
+
+.label_titulo_recomendacion {
+  font-size: 24px;
+  color: rgb(17, 16, 16);
+}
+
+.card-white {
+  background-color: #fff; /* Color de fondo blanco */
+  border: 1px solid #ddd; /* Borde ligero */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  padding: 20px; /* Espaciado interior */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin: 0 auto; /* Centra horizontalmente en la pantalla */
+  
+}
+
+.form-check {
+  display: flex;
+  flex-direction: row; /* Alinea los elementos en la misma fila horizontal */
+  align-items: center; /* Centra verticalmente los elementos en la fila */
+  margin-bottom: 20px; /* Espacio entre cada conjunto form-check */
+}
+
+.form-check label {
+  margin-right: 10px; /* Espacio entre el label y el input radio/select */
+}
+
+.form-check select {
+  width: 100%; /* Ocupa todo el espacio disponible horizontalmente */
+}
+
+
+
+/* ******* RECOMENDACION END********** */

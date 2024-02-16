@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Medical Clinic</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/style.css"
+      media="screen"
+    />
+
+    <!--[if IE 6]>
+      <link rel="stylesheet" type="text/css" href="iecss.css" />
+    <![endif]-->
+  </head>
+  <body>
+    <div id="main_container">
+      
+      <!-- header start-->  
+      <div class="header">
+
+        <!-- logo aplicacion start-->    
+        <div id="logo">
+          <a href="{% url 'home' %}"
+            ><img
+              src="../static/images/logo_segcaho.PNG"
+              alt=""
+              width="162"
+              height="54"
+              border="0"
+          /></a>
+        </div>
+        <!-- logo aplicacion  end -->
+
+        <!-- Right header start --> 
+        <div class="right_header">
+
+           <!-- logos usuario y salida start -->
+          <div class="top_menu">
+            <a class="login">{{user.username}}</a>
+            <a href="{% url 'logout' %}" class="sign_up"></a>
+          </div>
+          <!-- logos usuario y salida end -->
+
+          <!-- logos herramientas start -->
+          <div id="menu">
+            <ul>
+              <li><a href="{% url 'home' %}">Inicio</a></li>
+              <li><a href="/datos/">Datos</a></li>
+              <li><a href="/estudio/">Estudio</a></li>
+              <li><a href="/recomendacion/">Recomendación</a></li>
+            </ul>
+          </div>
+          <!-- logos herramientas end -->
+
+        </div>
+        <!-- right header end -->
+
+      </div>
+      <!-- Header end-->
+
+      <div id="middle_box">
+        <div class="middle_box_content">
+          <h1 style="color: black">
+            El Ministerio de Salud de Chile (Minsal) es el Ministerio de Estado
+            cuyo objetivo es coordinar, mantener y organizar la atención de la
+            salud del país.
+          </h1>
+          La misión institucional del Ministerio de Salud es contribuir a elevar
+          el nivel de salud de la población; desarrollar armónicamente los
+          sistemas de salud, centrados en las personas; fortalecer el control de
+          los factores que puedan afectar la salud y reforzar la gestión de la
+          red nacional de atención. Todo ello para acoger oportunamente las
+          necesidades de las personas, familias y comunidades, con la obligación
+          de rendir cuentas a la ciudadanía y promover la participación de las
+          mismas en el ejercicio de sus derechos y sus deberes.
+        </div>
+      </div>
+      <!-- Conteiner azul start-->
+      <div class="pattern_bg">
+        <div class="pattern_box">
+          <div class="pattern_box_icon">
+            <img
+              src="../static/images/recomendacion.png"
+              alt=""
+              width="70"
+              height="112"
+            />
+          </div>
+          <div class="pattern_content">
+            <h1>Recomendaciones <span class="blue"> Genéricas</span></h1>
+            <p class="pat">
+              Selecciona la opción "Recomendación" para generar una
+              recomendacion según tus requerimientos especificos.
+            </p>
+          </div>
+        </div>
+        <div class="pattern_box">
+          <div class="pattern_box_icon">
+            <img
+              src="../static/images/icon2.png"
+              alt=""
+              width="70"
+              height="112"
+            />
+          </div>
+          <div class="pattern_content">
+            <h1>Mis <span class="blue">Estudios</span></h1>
+            <p class="pat">
+              Selecciona la opción "Estudio" para ingresar tus estudios
+              realizados con su respectiva conclusión.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Conteiner azul end-->
+
+      <div id="footer">
+        <div class="center_footer" style="color: black">
+          Ministerio de Salud:
+          <a class="text-dark" href="https://www.minsal.cl/"> minsal.cl</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS mio-->
+    <script src="../static/Validaciones.js"></script>
+  </body>
+</html>

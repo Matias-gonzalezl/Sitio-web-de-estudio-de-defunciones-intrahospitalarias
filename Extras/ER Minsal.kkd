@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrama version="8" nombreAutor="asdf" nombreProyecto="Minsal" formula="%c">
+  <DataBase>3</DataBase>
+  <lista-item>
+    <item type="modelo-tabla" id="{f0c3668f-63e0-4077-be48-3e67a639d695}">
+      <nombre>HOSPITAL</nombre>
+      <posicion>
+        <x>-316</x>
+        <y>-135</y>
+      </posicion>
+      <lista-columnas>
+        <columna id="{d7b633fa-1870-4e13-a8ef-48db068f8942}" llaveprimaria="1" nulo="0" notas="" tipoDato="AUTOINCREMENT" nombre="id" llaveUnica=""/>
+        <columna id="{4cbff910-94b8-4bb8-993d-75847c400e0a}" llaveprimaria="0" nulo="0" notas="" tipoDato="TEXT" nombre="nombre" llaveUnica=""/>
+        <columna id="{4bf81743-38dc-4a6d-9ae2-0497f46003cf}" llaveprimaria="0" nulo="0" notas="" tipoDato="TEXT" nombre="direccion" llaveUnica=""/>
+      </lista-columnas>
+    </item>
+    <item type="modelo-tabla" id="{bd9804e0-9f84-41fa-99ec-45d3764250d3}">
+      <nombre>REGION</nombre>
+      <posicion>
+        <x>-16</x>
+        <y>-125</y>
+      </posicion>
+      <lista-columnas>
+        <columna id="{dea9de3c-48e5-4421-b81b-548b5d9d59d1}" llaveprimaria="1" nulo="0" notas="" tipoDato="AUTOINCREMENT" nombre="id" llaveUnica=""/>
+        <columna id="{33a330fd-f078-4958-be4a-55950747870a}" llaveprimaria="0" nulo="0" notas="" tipoDato="TEXT" nombre="nombre" llaveUnica=""/>
+      </lista-columnas>
+    </item>
+    <item type="modelo-tabla" id="{e25cbb44-a72b-4cac-bac6-4bb60fac2d84}">
+      <nombre>PACIENTE</nombre>
+      <posicion>
+        <x>-323</x>
+        <y>33</y>
+      </posicion>
+      <lista-columnas>
+        <columna id="{e50ea1cb-8bee-4781-8283-75292c79992d}" llaveprimaria="1" nulo="0" notas="" tipoDato="AUTOINCREMENT" nombre="id" llaveUnica=""/>
+        <columna id="{efd6706c-5e4a-460c-88df-d4518989b740}" llaveprimaria="0" nulo="0" notas="" tipoDato="INTEGER" nombre="run" llaveUnica="1"/>
+        <columna id="{9564cf59-b7fd-440e-a268-499bfd36c857}" llaveprimaria="0" nulo="0" notas="" tipoDato="TEXT" nombre="nombre" llaveUnica=""/>
+        <columna id="{377edac3-6e5c-4fde-a4f7-caaf9eb11dc6}" llaveprimaria="0" nulo="0" notas="" tipoDato="TEXT" nombre="ape_pat" llaveUnica=""/>
+        <columna id="{ddef20fd-7836-4b81-ae96-6df59726fd9d}" llaveprimaria="0" nulo="0" notas="" tipoDato="TEXT" nombre="ape_mat" llaveUnica=""/>
+        <columna id="{a259d6ba-b603-428c-9b6f-b8882408d82a}" llaveprimaria="0" nulo="0" notas="" tipoDato="DATE" nombre="fecha_def" llaveUnica=""/>
+      </lista-columnas>
+    </item>
+    <item type="modelo-tabla" id="{17c20283-ab3c-40f1-8314-8e39f4fe08cb}">
+      <nombre>ESTUDIO</nombre>
+      <posicion>
+        <x>-72</x>
+        <y>37</y>
+      </posicion>
+      <lista-columnas>
+        <columna id="{1f8a8a97-f670-426c-8b40-2052ddfc4c1a}" llaveprimaria="1" nulo="0" notas="" tipoDato="AUTOINCREMENT" nombre="id_estudio" llaveUnica=""/>
+        <columna id="{aed030f9-db87-465e-8c16-23be61a5e33b}" llaveprimaria="0" nulo="0" notas="" tipoDato="TEXT" nombre="titulo" llaveUnica=""/>
+        <columna id="{cd249780-7372-422d-84ec-e9722f55b6a8}" llaveprimaria="0" nulo="0" notas="" tipoDato="TEXT" nombre="cuerpo" llaveUnica=""/>
+        <columna id="{948fdc95-ab3f-4283-a991-e41db7550120}" llaveprimaria="0" nulo="0" notas="" tipoDato="TEXT" nombre="conclusion" llaveUnica=""/>
+      </lista-columnas>
+    </item>
+    <item type="modelo-relacion" id="{c9d29dc6-7a43-40e2-ba46-4ffe165da61d}">
+      <inicio>
+        <posicion>
+          <x>-248</x>
+          <y>-105</y>
+        </posicion>
+        <angulo>0</angulo>
+        <label>tener</label>
+        <cardinalidad>Identificativo</cardinalidad>
+        <cardinalidadLinea>Debe</cardinalidadLinea>
+        <owner>{f0c3668f-63e0-4077-be48-3e67a639d695}</owner>
+      </inicio>
+      <final>
+        <posicion>
+          <x>-16</x>
+          <y>-101.5</y>
+        </posicion>
+        <angulo>180</angulo>
+        <label>contener</label>
+        <cardinalidad>Uno</cardinalidad>
+        <cardinalidadLinea>Puede</cardinalidadLinea>
+        <owner>{bd9804e0-9f84-41fa-99ec-45d3764250d3}</owner>
+      </final>
+    </item>
+    <item type="modelo-relacion" id="{a6592b83-f2c0-4a14-935d-8d6bc33fc182}">
+      <inicio>
+        <posicion>
+          <x>-282</x>
+          <y>-75</y>
+        </posicion>
+        <angulo>270</angulo>
+        <label>tener</label>
+        <cardinalidad>Uno</cardinalidad>
+        <cardinalidadLinea>Puede</cardinalidadLinea>
+        <owner>{f0c3668f-63e0-4077-be48-3e67a639d695}</owner>
+      </inicio>
+      <final>
+        <posicion>
+          <x>-285.5</x>
+          <y>33</y>
+        </posicion>
+        <angulo>90</angulo>
+        <label>estar</label>
+        <cardinalidad>Identificativo</cardinalidad>
+        <cardinalidadLinea>Debe</cardinalidadLinea>
+        <owner>{e25cbb44-a72b-4cac-bac6-4bb60fac2d84}</owner>
+      </final>
+    </item>
+  </lista-item>
+</diagrama>

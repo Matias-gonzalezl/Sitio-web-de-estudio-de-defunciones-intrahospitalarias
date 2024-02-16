@@ -1,0 +1,152 @@
+
+        
+        <DOCTYPE html>
+            <html  lang="en">
+              <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Document</title>
+                <!-- Css propio-->
+                <link rel="stylesheet" href="../static/style.css" />
+                <!-- CSS bootstrap5-->
+                <link
+                  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+                  rel="stylesheet"
+                  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                  crossorigin="anonymous"
+                />
+              </head>
+              
+              <body class="body_estudio" >
+            
+                <!-- div conteiner pag  start--> 
+                <div class= "conteiner_pag">
+            
+                <!-- header start-->
+                <div class="nav" style="background-color: rgb(196, 191, 191); height: 114px;  margin: auto; width: 100%;" >
+                 
+                  <!-- logo aplicacion start-->
+                  <div id="logo_sitio">
+                    <a href="{% url 'home' %}">
+                      <img src="../static/images/logo_segcaho.PNG" alt=""  class="logo_muertes"  />
+                  </a>
+                  </div>
+            <!-- logo aplicacion  end -->
+            
+                <!-- Right header start --> 
+                <div class="header_derecha" >
+            
+              <!-- logos usuario y salida start -->
+              <div  class="usuario_salida">
+              <a  class="usuario_logueado" >{{user.username}}</a>
+              <a href="{% url 'logout' %}" class="salida_sitio" > </a>
+            </div>
+            <!-- logos usuario y salida end -->
+            
+            <!-- logos herramientas start -->
+            <div id="menu_herramientas" >
+              <ul >
+                <li ><a href="{% url 'home' %}">Inicio</a></li>
+                <li ><a  href="/datos/">Datos</a></li>
+                <li ><a href="/estudio/">Estudio</a></li>
+                <li ><a href="/recomendacion/">Recomendación</a></li>
+              </ul>
+            </div>
+            <!-- logos herramientas end -->
+            
+            </div>
+             <!-- right header end -->
+            
+            </div>
+                  <!-- Header end-->
+
+
+        <br>
+        
+        <br>
+        <br>
+        <!-- Formulario start-->
+        <div class="card-white">
+          <label class="label_titulo_recomendacion" > Elige a que nivel quieres la recomendación  </label>
+          <br>
+          <br>
+          <form >
+        
+          <div style="display: flex; justify-content: space-between;">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="nivel" id="flexRadioDefault3" data-select-id="regionSelect" onchange="toggleSelect()">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    A nivel nacional
+                </label>
+            </div>
+        
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="nivel" id="flexRadioDefault2" data-select-id="regionSelect" onchange="toggleSelect()">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    A nivel regional
+                </label>
+                <select class="form-select" id="regionSelect" aria-label="Default select example" disabled>
+                    <option selected>Elige una región</option>
+                    {% for i in regiones %}
+                        <option value="{{i.id_region}}">{{i.nombre}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="nivel" id="flexRadioDefault1" data-select-id="hospitalSelect" onchange="toggleSelect()">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    A nivel Hospitalario
+                </label>
+                <select class="form-select" id="hospitalSelect" aria-label="Default select example" disabled>
+                    <option selected>Elige un hospital</option>
+                    {% for i in hospitales %}
+                        <option value="{{i.id}}">{{i.nombre}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+       
+        <br>
+    
+       <button style="margin-left: 140px ;" type="button" class="btn btn-primary btn-lg" id="generarRecomendacion">Generar recomendación</button>
+    
+      </form>
+   </div>
+    <!-- Formulario end-->
+
+    <div id="resultado" style="display: none;"> </div>
+    
+    <br>
+    <br>
+   
+   
+    <!-- footer start -->
+   <footer class="bg-light text-center text-lg-start">
+    <div class="text-center p-3" style="background-color: rgb(196, 191, 191)">
+      Ministerio de salud:
+      <a class="text-dark" href="https://www.minsal.cl">minsal.cl</a>
+    </div>
+  </footer>
+ <!-- footer end -->
+
+</div>
+<!-- div conteiner pag  end-->
+
+  <!-- js bootstrap5-->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <!-- Jquery cdn -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.4.js"
+    integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"
+  ></script>
+  <!-- JS mio-->
+  <script src="../static/Validaciones.js"></script>
+</body>
+</html>
